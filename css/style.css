@@ -1,0 +1,548 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #262424;
+  color: white;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+}
+
+p {
+  font-family: Abril Fatface;
+}
+
+/* Containeren til indikationsbaren */
+.indikator-bar {
+  position: fixed;
+  width: 100%;
+  height: 8px;
+  left: 0;
+  top: 0;
+  background: #ccc;
+  z-index: 25;
+}
+
+/* Selve fremskridtet i indikationsbaren*/
+.fremskridt {
+  height: 8px;
+  background: #e74848;
+  width: 0%;
+  z-index: 25;
+}
+
+/* --- Gif forside ----- */
+#bg {
+  background-image: url(../images/bggif.gif);
+  filter: grayscale(100%);
+  width: 100%;
+  height: 100vh;
+  background-size: 150%;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+/* Forside tekst */
+#tekst {
+  background-color: white;
+  color: black;
+  font-size: 6vw;
+  /* vw gør at den blive mindre på mindre skærme */
+  font-weight: bolder;
+  width: 50%;
+  text-align: center;
+  /* centrere teksten */
+  position: absolute;
+  /* så vi kan sætte tekstne over billedet */
+  top: 75%;
+  /* sætter position i forhold til top og bund */
+  left: 75%;
+  /* sætter position i forhold til siderne */
+  transform: translate(-50%, -50%);
+  /* Sætter positionen */
+  mix-blend-mode: screen;
+  /* Denne gør den gennemsigtige skrift usynlig */
+}
+
+#citater .blockquote-wrapper
+
+/* wrapper */
+  {
+  display: flex;
+  height: 600px;
+  padding: 0 20px;
+}
+
+.farvespanhvid {
+  color: white;
+}
+
+.blockquote
+
+/* Selve citatkassen */
+  {
+  position: relative;
+  max-width: 640px;
+  margin: 80px auto;
+  align-self: center;
+}
+
+.blockquote h2 {
+  font-family: 'Abril Fatface', cursive;
+  position: relative;
+  color: #e74848;
+  font-size: 2.8rem;
+  font-weight: normal;
+  text-align: center;
+  line-height: 1;
+  margin: 0;
+  border: 2px solid #e74848;
+  border: solid 2px;
+  border-radius: 20px;
+  padding: 35px;
+}
+
+.blockquote h2:after {
+  content: "";
+  position: absolute;
+  border: 2px solid #e74848;
+  border-radius: 0 50px 0 0;
+  width: 60px;
+  height: 60px;
+  bottom: -62px;
+  left: 50px;
+  border-bottom: none;
+  border-left: none;
+}
+
+.blockquote h4
+
+/* Ejeren af ciatatet opsætning */
+  {
+  position: relative;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  padding-top: 15px;
+  z-index: 1;
+  margin-left: 150px;
+  padding-left: 12px;
+}
+
+#billede_2 {
+  background-image: url("../images/hullet.JPG");
+  width: 99vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#tekstbillede {
+  padding: 50px;
+  background-color: black;
+  opacity: 0.7;
+  height: 500px;
+  width: 350px;
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  border-bottom-left-radius: 10%;
+  border-top-right-radius: 10%;
+  float: right;
+  margin-right: 10%;
+  margin-top: 8%;
+}
+
+#billede_2 h2 {
+  text-align: center;
+}
+
+#billede_2 p, #billede_2 ul li {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+#tekstbillede img {
+  width: 45%;
+  padding: 15px;
+  padding-left: 0;
+  margin-left: -10px;
+  border-radius: 10%;
+}
+
+/*SKATER ANIMATIONEN*/
+.sliderskater {
+  width: 55%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  padding: 5%;
+  float: right;
+  margin-right: 5%;
+  position: absolute;
+}
+
+.sliderskater img {
+  position: absolute;
+  animation: slider;
+  opacity: 0;
+  height: 400px;
+  width: auto;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes sliderskater {
+  25% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+}
+
+.sliderskater img:nth-child(5) {
+  animation-delay: 0s;
+  left: 100px;
+  bottom: 250px;
+}
+
+.sliderskater img:nth-child(4) {
+  animation-delay: 1s;
+  left: 200px;
+  bottom: 300px;
+}
+
+.sliderskater img:nth-child(3) {
+  animation-delay: 2s;
+  left: 250px;
+  bottom: 350px;
+}
+
+.sliderskater img:nth-child(2) {
+  animation-delay: 3s;
+  left: 200px;
+  bottom: 300px;
+}
+
+.sliderskater img:nth-child(1) {
+  animation-delay: 4s;
+left: 100px;
+bottom: 250px;
+}
+
+
+/* -----------------VIDEO-------------------- */
+#eriksmindevideo {
+  padding: 5%;
+  width: 65%;
+  height: auto;
+}
+
+#lyd {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#foralle {
+  width: 100%;
+}
+
+#foralle h3 {
+  color: #e74848;
+  font-size: 6rem;
+  justify-content: center;
+  align-content: center;
+  text-align: right;
+  padding: 15%;
+}
+
+#findme {
+  width: 100px;
+  height: 400px;
+  position: absolute;
+  margin-top: -600px;
+  margin-left: 500px;
+}
+
+/* -------------Billede 3 ----------------*/
+#billede_3 {
+  background-image: url("../images/sofafinal.jpg");
+  width: 99vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* HER STARTER ANIMATIONEN PÅ BILLEDET*/
+/* fonten på kortet til MARIA */
+.flip-box {
+  background-color: transparent;
+  width: 500px;
+  height: 400px;
+  perspective: 1000px;
+  padding-top: 18%;
+  margin-left: 14%;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(-180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #262424;
+  opacity: 0.8;
+  width: 300px;
+  color: white;
+  transform: rotateY(180deg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*August*/
+.flip-box2 {
+  background-color: transparent;
+  width: 600px;
+  height: 400px;
+  perspective: 1000px;
+  padding-top: 8%;
+  margin-right: 13%;
+  float: right;
+  position: relative;
+}
+
+.flip-box-inner2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box2:hover .flip-box-inner2 {
+  transform: rotateY(-180deg);
+}
+
+.flip-box-front2, .flip-box-back2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front2 {
+  color: black;
+}
+
+.flip-box-back2 {
+  background-color: #262424;
+  opacity: 0.8;
+  color: white;
+  width: 300px;
+  transform: rotateY(-180deg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*GÆLDER FOR BEGGE TO*/
+.flip-box p, .flip-box2 p {
+  width: 280px;
+  margin: auto;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+/*---------------SLIDESHOW---------------*/
+#slideshow {
+  height: 850px;
+}
+
+.slider {
+  width: 55%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  padding: 5%;
+  float: right;
+  margin-right: 5%;
+}
+
+.slider img {
+  position: absolute;
+  animation: slider 20s infinite;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes slider {
+  25% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+}
+
+.slider img:nth-child(4) {
+  animation-delay: 0s;
+}
+
+.slider img:nth-child(3) {
+  animation-delay: 5s;
+}
+
+.slider img:nth-child(2) {
+  animation-delay: 10s;
+}
+
+.slider img:nth-child(1) {
+  animation-delay: 15s;
+}
+
+.teksttilimg {
+  width: 40%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  top: -400px;
+  left: 2%;
+  padding: 20px;
+
+}
+
+.teksttilimg p {
+  position: absolute;
+  animation: slider 20s infinite;
+  opacity: 0;
+  width: 65%;
+  color: white;
+  font-size: 26px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+@keyframes teksttilimg {
+  25% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+}
+
+.teksttilimg p:nth-child(4) {
+  animation-delay: 0s;
+}
+
+.teksttilimg p:nth-child(3) {
+  animation-delay: 5s;
+}
+
+.teksttilimg p:nth-child(2) {
+  animation-delay: 10s;
+}
+
+.teksttilimg p:nth-child(1) {
+  animation-delay: 15s;
+}
+
+#slideshow h2 {
+  padding-left: 3%;
+  color: #e74848;
+  position: absolute;
+  margin-top: 10%;
+  font-size: 40px;
+}
+
+/*--------------DET INTERAKTIVE KORT MED LYD-------------*/
+#interkort {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/mix.JPG);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#musiktekst {
+  text-align: center;
+  padding-top: 15%;
+  padding-right: 20px;
+  float: right;
+  width: 25%;
+  color: black;
+  position: relative;
+}
+
+#musiktekst p {
+  font-size: 20px;
+  width: 100%;
+}
+
+#knaptillyd {
+  background-color: transparent;
+  width: 820px;
+  height: 600px;
+  margin: auto;
+  top: 200px;
+  position: relative;
+}
+
+/*---------------FOOTER------------*/
+footer {
+  background-color: #262424;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#eriklogo {
+  height: 250px;
+  width: auto;
+  padding-top: 25px;
+}
+
+footer img {
+  height: 100px;
+  width: auto;
+}
